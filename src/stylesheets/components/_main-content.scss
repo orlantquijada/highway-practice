@@ -38,7 +38,7 @@
         @include flexbox;
 
         &__icon {
-          margin-right: 1rem;
+          margin-right: 0rem;
         }
 
         &__text {
@@ -52,6 +52,37 @@
 
         .filter-option:not(:last-child) {
           margin-right: 1rem;
+        }
+      }
+
+      .filter-option-container {
+        position: relative;
+      }
+
+      .filter-search {
+        position: absolute;
+        left: 0;
+        margin-top: 0.5rem;
+
+        input {
+          width: 100%;
+          font-size: 1rem;
+          padding: 0.5rem 1rem;
+
+          border-radius: $default-radius;
+          border: 1px solid $gray4;
+
+          &:focus {
+            border: 1px solid black;
+          }
+        }
+
+        &--hide {
+          display: none;
+        }
+
+        &--show {
+          display: block;
         }
       }
 
